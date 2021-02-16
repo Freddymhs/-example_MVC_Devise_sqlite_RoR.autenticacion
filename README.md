@@ -56,8 +56,9 @@ en  home_controller
               before_action :authenticate_user!
 
 las posibilidades de esto?
-before_action :authenticate_user!, only [:create,:delete,:update]  // para proteger las acciones de la web
-
+after_action :authenticate_user!   // antes debes estar autenticado
+before_action :authenticate_user!  , only: [:index]  // antes -> solo ves index
+after_action :authenticate_user!  , :except: [:index]// despues-> todo menos index
 # fin :)
 
 
