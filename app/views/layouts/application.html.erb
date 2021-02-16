@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ExampleMvcDeviseSqliteRorAutenticacion</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  aqui estan las alertas ocultas
+ <%if notice %>
+  NOTICE!!  <p class="notice"><%= notice %></p>
+  <%end%>
+
+  
+  <%if alert %>
+  ALERT!!  <p class="alert"><%= alert %></p>
+    <%end%>
+
+    <br/> <br/> <br/> <br/> <br/>
+  <body>
+    <%= yield %>
+  </body>
+</html>
